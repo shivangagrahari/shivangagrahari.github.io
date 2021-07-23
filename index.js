@@ -1,17 +1,8 @@
-var wk = document.getElementsByClassName('wrk');
-var sc = document.getElementsByClassName('work')
+var maillink = document.getElementById('mail')
+var jsmail = document.getElementById('mailtoid')
 
-console.log('JS loaded');
 
-// wk.addEventListener('mouseenter', function() {
-//   console.log('mouseenter');
-// sc.style.transitionDuartion = '12s';
-//   sc.style.visibility = 'visible';
-//
-//
-// })
-// wk.addEventListener('mouseleave', function() {
-//   console.log('mouseenter');
-//   sc.style.visibility= 'hidden';
-//
-// })
+maillink.onclick = function() {
+
+jsmail.style.display = 'block';
+}

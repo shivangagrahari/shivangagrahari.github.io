@@ -230,7 +230,6 @@ div.linked{
   padding-top: 16px;
   background-image: linear-gradient(to right, rgb(255, 50,20), rgb(100, 100,100));
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; 
   -webkit-text-fill-color: transparent;
 }
 
@@ -253,9 +252,9 @@ div.linked{
 #img{
   position: absolute;
   top: 80px;
-  right: 10px;
+  right: 160px;
 
-  width: 800px;
+  width: 720px;
   height: 640px;
 }
 
@@ -298,4 +297,130 @@ div.linked{
 
 .brief{
   color: rgb(150,150,150);
+}
+
+
+.c-bot{
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  background-color: blue;
+}
+
+.fa-envelope{
+  position: relative;
+  top: 25px;
+  left: 25px;
+}
+
+#mailtoid{
+  position: relative;
+  top: -100px;
+  left: -50px;
+  display: none;
+}
+
+
+#inputsubmit{
+  position: relative;
+  right: -98px;
+}
+
+
+@media only screen and (max-width: 410px) {
+
+  a:hover{
+    font-size:12px;
+  }
+  ol#ol1{
+    position: absolute;
+    top:-10px;
+  }
+
+  ol#ol2{
+    padding: 1px;
+
+  }
+  .intro{
+    background-color: white;
+    width:50%;
+    font-size: 20px;
+    height: 50%;
+  }
+  .navbar{
+    width: 99%;
+    font-size: 10px;
+    z-index: 1;
+    height:25px;
+  }
+  .navig{
+    font-size: 16px;
+
+  }
+
+
+  .wrk{
+      border-top:4px;
+  font-weight: bold;
+  font-family: sans-serif;
+  border-radius:2px;
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  margin-top: 5px;
+  width:75px;
+  height:36px;
+  }
+
+  .wrk:hover{
+  border-top: 4px;
+  border-radius: 2px;
+  margin-top:1px;
+  transition-duration: 1s;
+  background-color: transparent;
+  color: black;
+  height:30px;
+  text-decoration: underline;
+  }
+  .wrka{
+    font-size: 16px;
+    height:20px;
+  }
+  .work{
+    font-size: 16px;
+    position:fixed;
+    top: 2.5px;
+  }
+
+  .wrk:hover .work{
+  transition-duration: 1.5s;
+  width: 60px;
+  color: lightgrey;
+  opacity:1;
+  height: 120px;
+  font-size: 10px;
+  text-align:left;
+  border-right: 7px solid;
+  border-radius: 6px;
+  right:5px;
+  visibility: visible;
+  position: relative;
+  text-decoration-color: red;
+  display:block;
+}
+
+  .wrka:hover{
+    font-size: 16px;
+    height: 20px;
+
+  }
+   .linked{
+    position: absolute;
+    left: 100px;
+  }
+
 }

@@ -6,8 +6,8 @@ body{
 }
 
 header{
- 
-  
+
+
     width: 99%;
   height: 50px;
 
@@ -24,10 +24,10 @@ header{
   padding-top: 15px;
   background-position-x:center;
   z-index:1;
-}  
+}
 
 .navig{
- 
+
   height: 50px;
   font-size: 25px;
   padding-top: 15px;}
@@ -78,7 +78,7 @@ ol#ol2{
 .wrk:hover{
   transition-duration: 1s;
   background-color: transparent;
-  
+
   color: black;
   height:80px;
   text-decoration: underline;
@@ -178,7 +178,7 @@ color:orange;
   margin-right: 10px;
   margin-left: 10px;
   cursor: pointer;
-  
+
 }
 .sb{
     font-size: 16px;width:300px;
@@ -194,11 +194,11 @@ color:orange;
 }
 .swb:hover .sb{
   transition-duration: 3s;
- 
+
   color: lightgrey;
   height: 30px;
   margin-top: 30px;
- 
+
   background-color: transparent;
   visibility: visible;
   position: relative;
@@ -231,6 +231,7 @@ div.linked{
   background-image: linear-gradient(to right, rgb(255, 50,20), rgb(100, 100,100));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; 
+  -webkit-text-fill-color: transparent;
 }
 
 .intro:hover{
@@ -244,7 +245,7 @@ div.linked{
   padding-left: 32px;
   box-shadow: -5px 8px 8px 8px rgb(10,10,10);
   border-radius: 32px;
-  
+
 }
 
 
@@ -298,15 +299,3 @@ div.linked{
 .brief{
   color: rgb(150,150,150);
 }
-
-
-
-
-
-
-
-
-
-
-
-

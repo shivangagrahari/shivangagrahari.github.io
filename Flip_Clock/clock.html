@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="clock.css">
+    <title></title>
+  </head>
+  <body>
+
+<section id="timedisplay">
+<center>
+
+
+
+      <ol>
+        <li class="timelist"></li>
+        <li class="timelist"></li>
+        <li class="timelist"><b id="sssdis"></b></li>
+      </ol>
+
+      <ol style="list-style-type: none">
+
+        <li id="shdis"><b id="hdis">HourDisplay</b></li>
+
+        <li id="smdis"><b id="mdis"> HourDisplay </b></li>
+
+        <li class="c-flip" id="ssdis"><b class="c-time" id="sdis" style="display: none"></b></li>
+
+      </ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</center>
+</section>
+
+
+
+
+
+
+
+<script id="date">
+  setInterval(show, 1000)
+  function show()
+  {
+    var da = new Date()
+    var h = da.getHours();
+    var m = da.getMinutes();
+    var s = da.getSeconds();
+
+    if(h<10){document.getElementById('hdis').innerHTML ="0"+ h;}
+    else {document.getElementById('hdis').innerHTML = h;}
+
+
+    if(m<10){document.getElementById('mdis').innerHTML ="0"+ m;}
+    else {document.getElementById('mdis').innerHTML = m;}
+
+    if(s<10){document.getElementById('sdis').innerHTML ="0"+ s;document.getElementById('sssdis').innerHTML ="0"+ s;}
+    else {document.getElementById('sdis').innerHTML = s;document.getElementById('sssdis').innerHTML = s;}
+
+  }
+  show();
+</script>
+    <!-- <script type="text/javascript">
+    document.getElementById('hinge').style.transform= 'rotateX(180deg)';
+    </script> --> -->
+
+
+
+  </body>
+</html>

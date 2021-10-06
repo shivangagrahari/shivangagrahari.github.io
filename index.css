@@ -1,9 +1,67 @@
 
 body{
-  background-color: rgb(32,32,32);
+  background-color: rgb(16,16,16);
 /*   background-image: linear-gradient(to right,rgb(0,255,128),rgb(0,255,191), rgb(0,255,255), rgb(0,191,255), rgb(0,128,255));
  */
 }
+
+.container{
+  position: absolute;
+  top: 800px;
+  left: 400px;
+  display: inline-grid;
+  scroll-behavior: smooth;
+}
+
+
+form{
+  display: inline-flex;
+}
+
+
+#add{
+  border: 0px;
+  width: 80px;
+  padding: 2px 2px 2px 2px;
+  background-color: rgb(255,50,50);
+  margin-left: 20px;
+}
+
+#listitem{
+  width: 200px;
+  margin-left: 2px;
+  padding: 10px 20px 10px 2px;
+  border: 0;
+  outline: none;
+  border-bottom: 2px solid rgb(10,10,10);
+  transition: 0.3s;
+}
+
+#listitem:focus{
+  border-bottom: 2px solid red;
+}
+
+
+#list{
+list-style-type: none;
+margin-top: 24px;
+}
+
+.listup{
+  position: relative;
+  top: 8px;
+  font-size: 16px;
+}
+
+.listup:nth-child(odd){
+  background-color: rgb(200,175,175);
+}
+
+.listup:hover{
+  background-color: rgb(255,200,200);
+
+}
+
 
 ::-webkit-scrollbar {
   width: 20px;
@@ -240,12 +298,12 @@ div.linked{
   width: 540px;
   height: 320px;
   padding-left: 32px;
-  box-shadow: -5px -8px 8px 8px rgb(10,10,10);
+  box-shadow: -5px -8px 8px 8px rgb(24,24,24);
   border-radius: 32px;
 }
 #name{
   padding-top: 16px;
-  background-image: linear-gradient(to right, rgb(255, 50,20), rgb(100, 100,100));
+  background-image: linear-gradient(to right, rgb(225, 50,20), rgb(200, 100,40));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -259,7 +317,7 @@ div.linked{
   width: 540px;
   height: 320px;
   padding-left: 32px;
-  box-shadow: -5px 8px 8px 8px rgb(10,10,10);
+  box-shadow: -5px 8px 16px 16px rgb(10,10,10);
   border-radius: 32px;
 
 }

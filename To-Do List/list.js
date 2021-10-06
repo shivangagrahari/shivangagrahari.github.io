@@ -14,6 +14,7 @@ var nin = inp.value;
 
 if(nin!== ''){
   var listupdate = document.createElement("li");
+  listupdate.className = "listup";
   listupdate.innerHTML = nin;
   ulist.appendChild(listupdate);
   var removebtn = document.createElement("button");

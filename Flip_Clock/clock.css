@@ -1,133 +1,133 @@
-body{
-  vertical-align: middle;
+html { height: 100%; }
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  background: #EEE;
+}
+
+.flip-clock {
   text-align: center;
-  background-color: rgb(32,32,32);
+  perspective: 400px;
+  margin: 20px auto;
+
+  *,
+  *:before,
+  *:after { box-sizing: border-box; }
 }
 
-ol{
-  position: fixed;
-  top: 192px;
-  left: 120px;
+.flip-clock__piece {
+  display: inline-block;
+  margin: 0 5px;
 }
 
-li{
-  display: inline-flex;
-  border-radius: 30px;
-  background-color: rgb(200,200,200);
-  font-size: 250px;
-  width: 270px;
-  margin-right: 50px;
-  height:300px;
-  padding-left: 50px;
-  text-align: center;
-  background-color: teal;
+.flip-clock__slot {
+  font-size: 2vw;
 }
 
+@halfHeight: 0.72em;
+@borderRadius: 0.15em;
 
-.timelist{
-  position: fixed;
-  top: 210px;
-  right: 88.5px;
-  background-color: white;
-  opacity:1;
-}
-
-
-
-.c-flip{
-  background-color: transparent;
-  opacity:1;
-  animation-name: flipit;
-  animation-delay: 2s;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  z-index: 100;
-  border-radius: 30px;
-
-}
-
-
-.c-flip::before{
- top: 50%;
-}
-
-.c-flip::after{
-  border-top: 1px solid black;
-  box-shadow: inset 0 500px 500px #202020;
-  content: '';
+.card {
   display: block;
-  height: calc(50%);
-  left: 0;
+  position: relative;
+  padding-bottom: @halfHeight;
+  font-size: 9vw;
+  line-height: 0.95;
+}
+
+.card__top,
+.card__bottom,
+.card__back::before,
+.card__back::after {
+  display: block;
+  height: @halfHeight;
+  color: #ccc;
+  background: #222;
+
+  border-radius: @borderRadius @borderRadius 0 0;
+  backface-visiblity: hidden;
+  transform-style: preserve-3d;
+  width: 1.8em;
+  transform: translateZ(0);
+}
+
+.card__bottom {
+  color: #FFF;
   position: absolute;
-  text-align: center;
-  width: 100%;
-  }
-
-
-
-
-
-.c-time{
-    transform-style: preserve-3d;
-  z-index: 100;
-    backface-visibility: hidden;
-
+  top: 50%;
+  left: 0;
+  border-top: solid 1px #000;
+  background: #393939;
+  border-radius: 0 0 @borderRadius @borderRadius;
+  pointer-events: none;
+  overflow: hidden;
 }
 
-.c-time::before{
-  backface-visibility: visible;
+.card__bottom::after {
+  display: block;
+  margin-top: -@halfHeight;
 }
 
-
-.c-time::after{
-  backface-visibility: visible;
+.card__back::before,
+.card__bottom::after {
+  content: attr(data-value);
 }
 
-@keyframes flipnum {
-  0%{
+.card__back {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 0%;
+  pointer-events: none;
+}
+
+.card__back::before {
+  position: relative;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.flip .card__back::before {
+  animation: flipTop 0.3s cubic-bezier(.37,.01,.94,.35);
+  animation-fill-mode: both;
+  transform-origin: center bottom;
+}
+
+.flip .card__back .card__bottom {
+  transform-origin: center top;
+  animation-fill-mode: both;
+  animation: flipBottom 0.6s cubic-bezier(.15,.45,.28,1);// 0.3s;
+}
+
+@keyframes flipTop {
+  0% {
     transform: rotateX(0deg);
+    z-index: 2;
   }
-  25%{
-      transform-style: preserve-3d;
-
+  0%, 99% {
+    opacity: 0.99;
   }
-  50%{
-    transform-style: preserve-3d;
-    visibility: hidden;
-  }
-  75%{
-    transform-style: preserve-3d;
-    visibility: hidden;
-  }
-  90%{
-    transform-style: preserve-3d;
-    visibility: visible;
+  100% {
+    transform: rotateX(-90deg);
+    opacity: 0;
   }
 }
 
-
-
-@keyframes flipit{
-  0%{
+@keyframes flipBottom {
+  0%, 50% {
+    z-index: -1;
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+  51% {
+    opacity: 0.99;
+  }
+  100% {
+    opacity: 0.99;
     transform: rotateX(0deg);
-  }
-  25%{
-      transform-style: preserve-3d;
-    transform: rotateX(-36deg);
-
-  }
-  50%{
-    transform-style: preserve-3d;
-    transform: rotateX(-72deg);
-  }
-  75%{
-    transform-style: preserve-3d;
-    transform: rotateX(-108deg);
-  }
-  100%{
-    transform-style: preserve-3d;
-    transform: rotateX(-180deg);
-    visibility: hidden;
+    z-index: 5;
   }
 }

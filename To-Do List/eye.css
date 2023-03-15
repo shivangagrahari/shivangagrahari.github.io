@@ -1,0 +1,29 @@
+.ellipse {
+    width: 150px;
+    height: 70px;
+    border-radius: 50% / 30%;
+    background-color: blue;
+    position: relative;
+    transform: rotate(45deg);
+  }
+  
+  .ellipse::before,
+  .ellipse::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: blue;
+  }
+  
+  .ellipse::before {
+    top: -15px;
+    left: -15px;
+  }
+  
+  .ellipse::after {
+    bottom: -15px;
+    right: -15px;
+  }
+  

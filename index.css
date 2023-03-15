@@ -13,9 +13,7 @@ body{
   scroll-behavior: smooth;
 }
 
-.canvas {
-  border: 1px solid #000;
-}
+
 
 form{
   display: inline-flex;
@@ -228,13 +226,13 @@ color:orange;
   visibility: hidden;
 }
 .abt:hover{
-  transition-duration: 1s;
+  transition-duration: 10s;
   background-color: white;
   color: black;
   text-decoration: underline;
 }
 .abt:hover .ab{
-  transition-duration: 3s;
+  transition-duration: 5s;
   width: 500px;
   color: red;
   height: 300px;
@@ -270,13 +268,13 @@ color:orange;
   visibility: hidden;
 }
 .swb:hover{
-  transition-duration: 1s;
+  transition-duration: 10s;
   background-color: white;
   color: black;
   text-decoration: underline;
 }
 .swb:hover .sb{
-  transition-duration: 3s;
+  transition-duration: 10s;
 
   color: lightgrey;
   height: 30px;
@@ -376,8 +374,33 @@ div.linked{
     width: 100px;
   height: 100px;
   border-radius: 15px;
-  background-color: red;
+  background-color: teal;
 }
+
+.eyes{
+  position: absolute;
+  top:120px;
+  right: 70px;
+  bottom: 0px;
+    width: 600px;
+  height: 300px;
+
+  border: soild;
+  border-color: teal;
+  border-radius: 200%;
+  padding-top:20%;
+  opacity: 0.2;
+}
+
+#canvas{
+  position:relative;
+  height: 300px;
+  width: 100px;
+  top:100px;
+  background-color: white;
+  opacity: 1;
+}
+
 
 .brief{
   color: rgb(150,150,150);
